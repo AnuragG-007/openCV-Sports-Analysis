@@ -2,7 +2,7 @@
 title: SportVision AI Backend
 emoji: 🏟️
 colorFrom: green
-colorTo: orange
+colorTo: red
 sdk: docker
 pinned: false
 ---
