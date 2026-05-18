@@ -11,7 +11,10 @@ class MediaType(str, Enum):
     video = "video"
 
 class BoundingBox(BaseModel):
-    x1: float; y1: float; x2: float; y2: float
+    x1: float
+    y1: float
+    x2: float
+    y2: float
 
 class Detection(BaseModel):
     class_id: int
@@ -27,6 +30,8 @@ class ModelInfo(BaseModel):
     parameters: str
 
 class AnalysisResult(BaseModel):
+    model_config = {"protected_namespaces": ()}
+
     mode: SportMode
     media_type: MediaType
     original_filename: str
