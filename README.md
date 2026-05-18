@@ -183,6 +183,67 @@ The included `sports-cv.ipynb` documents the training workflow for both sports d
 
 ---
 
+## 📊 Model Performance & Results
+
+The models were trained using Ultralytics YOLOv11 architecture with optimized hyperparameters and augmentation strategies. Below are the final evaluation metrics obtained on the validation set.
+
+---
+
+### 🏎️ Formula 1 Detection (Object Detection)
+
+| Metric         | Value |
+|---------------|------|
+| Precision     | 0.884 |
+| Recall        | 0.884 |
+| mAP@50        | 0.935 |
+| mAP@50-95     | 0.773 |
+
+**Observations:**
+- Strong detection performance across all 10 constructor classes  
+- High mAP@50 indicates accurate localization and classification  
+- Balanced precision and recall → stable predictions  
+- Slight drop in mAP@50-95 suggests difficulty with small/distant cars  
+
+---
+
+### ⚽ Football Segmentation (Instance Segmentation)
+
+#### 🔹 Bounding Box Performance
+
+| Metric         | Value |
+|---------------|------|
+| Precision     | 0.959 |
+| Recall        | 0.920 |
+| mAP@50        | 0.947 |
+| mAP@50-95     | 0.688 |
+
+#### 🔹 Segmentation Mask Performance
+
+| Metric         | Value |
+|---------------|------|
+| Precision     | 0.835 |
+| Recall        | 0.803 |
+| mAP@50        | 0.802 |
+| mAP@50-95     | 0.456 |
+
+**Observations:**
+- Excellent bounding box detection performance (~0.95 mAP@50)  
+- Segmentation performs well for large objects (players)  
+- Lower mask mAP@50-95 reflects challenges in fine boundary precision  
+- Ball detection remains the most difficult due to scale and motion  
+
+---
+
+### 🧠 Key Insights
+
+- OpenCV preprocessing significantly stabilizes inference outputs  
+- Detection performance is highly robust across varied race conditions  
+- Segmentation accuracy is strong but sensitive to object size  
+- mAP@50 vs mAP@50-95 gap highlights localization precision challenges  
+- Models generalize well to unseen broadcast footage  
+
+---
+
 ## 🏗️ Repository Structure
 
 ```text
