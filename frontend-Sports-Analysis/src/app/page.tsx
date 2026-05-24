@@ -41,7 +41,7 @@ export default function HomePage() {
         <div className="flex items-center gap-6 text-sm text-white/50">
           <Link href="/football" className="hover:text-white transition-colors">Football</Link>
           <Link href="/f1" className="hover:text-white transition-colors">Formula 1</Link>
-          <a href="https://github.com" target="_blank" rel="noreferrer"
+          <a href="https://github.com/AnuragG-007/openCV-Sports-Analysis" target="_blank" rel="noreferrer"
             className="px-4 py-2 rounded-lg border border-white/10 hover:border-white/25 transition-all text-white/70 hover:text-white">
             GitHub
           </a>
